@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: code-with-quarkus-hola-cqni
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: code-with-quarkus-hola-cqni
+    app.kubernetes.io/part-of: annyong
+  name: code-with-quarkus-hola-cqni
+  namespace: rh-ee-chernand-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: code-with-quarkus-hola-cqni
+    weight: null
+status: {}
