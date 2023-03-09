@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: code-with-quarkus-hola-cqni
+  namespace: rh-ee-chernand-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:a55e2d0de71a374b6fed1becd47198b08abd072d27290d45c8860a38369a0ab3
+        name: my-java-quarkus
+        resources: {}
+status: {}
